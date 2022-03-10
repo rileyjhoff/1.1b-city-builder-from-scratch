@@ -25,6 +25,8 @@ Additional considerations:
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
 
+## Rubric
+
 | User should be able to . . .                                                         |             |
 | :----------------------------------------------------------------------------------| ----------: |
 | Visit the deployed pages on GitHub pages, with link in the About section of the Github repo |    2 |
@@ -43,3 +45,31 @@ Additional considerations:
 ## Plan
 
 ![wireframes](/assets/wireframes.png)
+
+- HTML Elements
+  - two divs to split page between the left (image) side, and the right (dropdown/info) side
+    - Why? will make styling easier
+    - How? section { display: grid; grid-template-columns: some% some%; }
+  - four divs to split the right side up
+    - Why? will make styling easier
+    - How? right-side-div { display: grid; grid-template-rows: some% some% some% some%;
+  - three image tags
+    - Why? to display the three selected images
+    - How? img1.src = `/assets/${selected-image}.png`
+  - three dropdowns
+    - Why? so we know which images the user selected and can then display those images in the three image tags
+    - How? dropdown1.addEventListener('change', () => { const newImg = dropdown1.value; do something with that; })
+  - div for displaying stats - already included in the four divs to be added to the right side
+    - Why? so we have a place to display how many times the user used each dropdown
+    - How? put text in p tags and the numbers that we want to change as the state changes in span tags
+  - input for slogans
+    - Why? so we can add slogans the user inputs to the slogan list area
+    - How? const newSlogan = sloganInput.value
+  - button for slogans
+    - Why? so the user can submit the slogan and we can grab what they typed in the input field
+    - How? sloganButton.addEventListener('click', () => { const newSlogan = sloganInput.value; add newSlogan to the slogan list array with .push(); clear slogan list area; append updated slogan list array to the slogan area with dynamically created p tags })
+  - div for slogan list - already included in the four divs to be added to the right side
+    - Why? to hold the slogan list
+    - How? text is cleared and we append new slogans with their own p tags using our slogan button event listener
+- Events
+- Order
