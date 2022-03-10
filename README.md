@@ -72,4 +72,16 @@ Additional considerations:
     - Why? to hold the slogan list
     - How? text is cleared and we append new slogans with their own p tags using our slogan button event listener
 - Events
+  - user selects an option from one of the dropdowns (x3)
+    - new image is displayed in the respective image tag on the left
+      - grab value of the selected option from the dropdown
+      - the value selected determines which image is displayed
+    - update state of how many times that dropdowns been selected and display the updated state
+      - increment how many times that dropdown has been changed: dropdown1++
+      - update the text content in the display stats area to show current state
+  - user clicks slogan button
+    - value in the slogan input field is grabbed and pushed to the slogan list array
+    - text is cleared from slogan list area
+    - new slogan list is appended to the slogan list area
+      - loops through slogan list array and appends each item in the array to the slogan list area as a p tag
 - Order
