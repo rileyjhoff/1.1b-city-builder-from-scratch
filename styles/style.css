@@ -25,7 +25,7 @@ body {
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
-    --footer-height: 25px;
+    --footer-height: 0px;
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
@@ -34,18 +34,19 @@ body {
 body {
     height: 100%;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-bottom: 30px;
     height: 100%;
     width: 100%;
 }
 
-section {
+.main-section {
     background-color: var(--color5);
     width: 90%;
     height: 90%;
@@ -59,6 +60,10 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+}
+
+.add-space {
+    height: 10%;
 }
 
 header {
@@ -109,8 +114,13 @@ footer {
 .left-side {
     display: flex;
     flex-flow: column;
-    align-items: space-around;
-    justify-items: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.images {
+    height: 30%;
+    width: 90%;
 }
 
 .right-side {
@@ -125,11 +135,20 @@ footer {
 #dropdown-div {
     display: flex;
     flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#stats-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #stats-div > p {
     padding: 0;
-    /* margin: 0; */
+    margin: 0;
 }
 
 #slogan-input-div {
@@ -139,12 +158,6 @@ footer {
     align-items: center;
 }
 
-#slogan-list-div {
-    display: flex;
-    flex-flow: column;
-    /* align-items: center; */
-}
-
 #slogan-input {
     width: 80%;
     align-self: center;
@@ -152,5 +165,10 @@ footer {
 
 #slogan-button {
     width: fit-content;
+}
 
+#slogan-list-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
