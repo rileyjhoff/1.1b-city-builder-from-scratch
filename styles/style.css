@@ -140,9 +140,10 @@ footer {
 
 #stats-div {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: space-evenly;
+    padding: 0 80px;
 }
 
 #stats-div > p {

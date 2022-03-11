@@ -11,16 +11,12 @@ const topPleaseSelect = document.getElementById('select-1');
 const middlePleaseSelect = document.getElementById('select-2');
 const bottomPleaseSelect = document.getElementById('select-3');
 
-const topCountEl = document.getElementById('top');
-const middleCountEl = document.getElementById('middle');
-const bottomCountEl = document.getElementById('bottom');
+const statsEl = document.getElementById('stats');
 
 const sloganInput = document.getElementById('slogan-input');
 const sloganButton = document.getElementById('slogan-button');
 
 const sloganAreaEl = document.getElementById('slogan-list-div');
-
-// console.log(topImage, topDropdown, topCountEl, middleImage, middleDropdown, middleCountEl, bottomImage, bottomDropdown, bottomCountEl, sloganInput, sloganButton, sloganAreaEl);
 
 // let state
 top = 0;
@@ -37,3 +33,13 @@ bottomPleaseSelect.disabled = true;
   // update DOM to reflect the new state
 
 // functions
+
+function displayCountStats() {
+  statsEl.textContent = `You've changed the sky ${top} times. 
+  You've changed the terrain ${middle} times. 
+  You've changed the architecture ${bottom} times.`;
+}
+
+displaySlogans(){
+
+}
