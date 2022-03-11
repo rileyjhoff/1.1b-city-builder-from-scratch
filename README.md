@@ -76,7 +76,7 @@ Additional considerations:
     - new image is displayed in the respective image tag on the left
       - grab value of the selected option from the dropdown
       - the value selected determines which image is displayed
-    - update state of how many times that dropdowns been selected and display the updated state
+    - update state with how many times that dropdowns been selected and display the updated state
       - increment how many times that dropdown has been changed: dropdown1++
       - update the text content in the display stats area to show current state
   - user clicks slogan button
@@ -85,3 +85,25 @@ Additional considerations:
     - new slogan list is appended to the slogan list area
       - loops through slogan list array and appends each item in the array to the slogan list area as a p tag
 - Order
+  - add HTML elements to index.html
+    - include necessary class and ID tags
+    - validate by looking at live server
+  - add grid styling to split page into a left and right side & to split the right side into four separate areas
+    - validate with borders and by looking at live server
+  - get DOM elements in app.js
+    - three img tags
+    - three dropdowns
+    - three spans for displaying stats
+    - slogan input
+    - slogan button
+    - slogan list area
+    - validate by console logging the DOM elements
+  - initialize state
+  - declare functions
+    - validate by calling functions and using console.log()
+  - write event listeners
+    - one for each dropdown
+    - one for slogan button
+    - validate by console logging in the event listeners
+  - adjust styling as needed
+  
