@@ -35,11 +35,18 @@ bottomPleaseSelect.disabled = true;
 // functions
 
 function displayCountStats() {
-  statsEl.textContent = `You've changed the sky ${top} times. 
-  You've changed the terrain ${middle} times. 
-  You've changed the architecture ${bottom} times.`;
+    statsEl.textContent = `You've changed the sky ${top} times. 
+    You've changed the terrain ${middle} times. 
+    You've changed the architecture ${bottom} times.`;
 }
 
-displaySlogans(){
-
+function displaySlogans() {
+    sloganAreaEl.textContent = '';
+    const newSlogan = sloganInput.value;
+    slogans.push(newSlogan);
+    for (let slogan of slogans) {
+        const addSlogan = document.createElement('p');
+        sloganAreaEl.append(addSlogan);
+    }
+    sloganInput.value = '';
 }
