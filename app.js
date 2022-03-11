@@ -19,9 +19,9 @@ const sloganButton = document.getElementById('slogan-button');
 const sloganAreaEl = document.getElementById('slogan-list-div');
 
 // let state
-top = 0;
-middle = 0;
-bottom = 0;
+// topCount = 0;
+// middleCount = 0;
+// bottomCount = 0;
 const slogans = [];
 topPleaseSelect.disabled = true;
 middlePleaseSelect.disabled = true;
@@ -31,13 +31,28 @@ bottomPleaseSelect.disabled = true;
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+topDropdown.addEventListener('change', () => {
+    console.log('this is working');
+});
+
+middleDropdown.addEventListener('change', () => {
+    console.log('this is working');
+});
+
+bottomDropdown.addEventListener('change', () => {
+    console.log('this is working');
+});
+
+sloganButton.addEventListener('click', () => {
+    console.log('this is working');
+});
 
 // functions
 
 function displayCountStats() {
-    statsEl.textContent = `You've changed the sky ${top} times. 
-    You've changed the terrain ${middle} times. 
-    You've changed the architecture ${bottom} times.`;
+    statsEl.textContent = `You've changed the sky ${topCount} times. 
+    You've changed the terrain ${middleCount} times. 
+    You've changed the architecture ${bottomCount} times.`;
 }
 
 function displaySlogans() {
