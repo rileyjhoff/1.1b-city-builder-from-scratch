@@ -31,21 +31,29 @@ body {
     background-color: var(--color2);
 }
 
+body {
+    height: 100%;
+    width: 100%;
+}
+
 main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    height: 100%;
+    width: 100%;
 }
 
 section {
     background-color: var(--color5);
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
@@ -88,4 +96,30 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.left-side, .right-side {
+    display: grid;
+    border: 1px solid black;
+}
+
+.left-side {
+    display: flex;
+    flex-flow: column;
+    align-items: space-around;
+    justify-items: space-around;
+}
+
+.right-side {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.right-side > div {
+    border: 1px solid black;
+}
+
+#stats-div > p {
+    padding: 0;
+    margin: 0;
 }
