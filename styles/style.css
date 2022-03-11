@@ -25,32 +25,44 @@ body {
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
-    --footer-height: 25px;
+    --footer-height: 0px;
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
+body {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-section {
-    background-color: var(--color5);
-    max-width: 80%;
+main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main-section {
+    background-color: var(--color5);
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+}
+
+.add-space {
+    height: 10%;
 }
 
 header {
@@ -67,6 +79,9 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    margin: 5px auto;
+}
 .gutter-right {
     margin-right: 20px;
 }
@@ -76,9 +91,9 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin: 0;
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +103,67 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.left-side {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.images {
+    height: 30%;
+    width: 90%;
+}
+
+.right-side {
+    display: grid;
+    grid-template-rows: 25% 20% 15% 40%;
+}
+
+#dropdown-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#stats-div {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#stats-div > p {
+    padding: 0;
+    margin: 0;
+}
+
+#slogan-input-div {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#slogan-input {
+    width: 80%;
+    align-self: center;
+}
+
+#slogan-button {
+    width: fit-content;
+}
+
+#slogan-list-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.hide {
+    visibility: hidden;
 }

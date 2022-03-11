@@ -20,51 +20,58 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+            <div class="left-side">
+                <img src="assets/sky-1.jpg" alt="" class="images" id="image-1">
+                <img src="assets/terrain-1.jpg" alt="" class="images" id="image-2">
+                <img src="assets/buildings-1.jpg" alt="" class="images" id="image-3">
+            </div>
+            <div class="right-side">
+                <div class="right-side-divs" id="dropdown-div">
+                    <h3>Use the dropdowns below to create your city.</h3>
+                    <label>
+                        Sky:
+                        <select id="dropdown-1">
+                            <option value="select" id="select-1">Please Select an Option</option>
+                            <option value="1">Clear Sky</option>
+                            <option value="2">Slightly Cloudy</option>
+                            <option value="3">Mostly Cloudy</option>
+                        </select>
+                    </label>
+                    <label>
+                        Terrain:
+                        <select id="dropdown-2">
+                            <option value="select" id="select-2">Please Select an Option</option>
+                            <option value="1">Mountains</option>
+                            <option value="2">Dessert</option>
+                            <option value="3">Wetlands</option>
+                        </select>
+                    </label>
+                    <label>
+                        Architecture:
+                        <select id="dropdown-3">
+                            <option value="select" id="select-3">Please Select an Option</option>
+                            <option value="1">Stucco</option>
+                            <option value="2">City</option>
+                            <option value="3">Brick</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="right-side-divs" id="stats-div">
+                    <p id="stats"></p>
+                </div>
+                <div class="right-side-divs" id="slogan-input-div">
+                    <p>Enter your city's slogan(s): </p>
+                    <input id="slogan-input">
+                    <button id="slogan-button">Add Slogan</button>
+                </div>
+                <div class="right-side-divs" id="slogan-list-div">
+                    <h3 class="hide" id="slogan-header">Slogan(s):</h3>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2022 Alchemy Code Lab</div>
     </footer>
 
     <script type="module" src="./app.js"></script>
