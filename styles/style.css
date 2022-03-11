@@ -75,6 +75,9 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    margin: 5px auto;
+}
 .gutter-right {
     margin-right: 20px;
 }
@@ -84,7 +87,7 @@ header img {
 }
 
 p {
-    margin: var(--gutter);
+    margin: 5px;
 }
 
 footer {
@@ -112,14 +115,19 @@ footer {
 
 .right-side {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 25% 20% 15% 40%;
 }
 
 .right-side > div {
     border: 1px solid black;
 }
 
+#dropdown-div {
+    display: flex;
+    flex-flow: column;
+}
+
 #stats-div > p {
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
 }
