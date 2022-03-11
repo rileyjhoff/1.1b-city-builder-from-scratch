@@ -105,11 +105,6 @@ footer {
     box-shadow: var(--shadow);
 }
 
-.left-side, .right-side {
-    display: grid;
-    border: 1px solid rgb(21, 190, 212);
-}
-
 .left-side {
     display: flex;
     flex-flow: column;

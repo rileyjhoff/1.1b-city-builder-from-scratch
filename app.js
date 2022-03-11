@@ -36,21 +36,18 @@ bottomPleaseSelect.disabled = true;
 topDropdown.addEventListener('change', () => {
     topCount++;
     topImage.src = `./assets/sky-${topDropdown.value}.jpg`;
-    topImage.classList.remove('hide');
     displayCountStats();
 });
 
 middleDropdown.addEventListener('change', () => {
     middleCount++;
     middleImage.src = `./assets/terrain-${middleDropdown.value}.jpg`;
-    middleImage.classList.remove('hide');
     displayCountStats();
 });
 
 bottomDropdown.addEventListener('change', () => {
     bottomCount++;
     bottomImage.src = `./assets/buildings-${bottomDropdown.value}.jpg`;
-    bottomImage.classList.remove('hide');
     displayCountStats();
 });
 
