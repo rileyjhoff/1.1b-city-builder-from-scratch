@@ -107,7 +107,7 @@ footer {
 
 .left-side, .right-side {
     display: grid;
-    border: 1px solid black;
+    border: 1px solid rgb(21, 190, 212);
 }
 
 .left-side {
@@ -127,10 +127,6 @@ footer {
     grid-template-rows: 25% 20% 15% 40%;
 }
 
-.right-side > div {
-    border: 1px solid black;
-}
-
 #dropdown-div {
     display: flex;
     flex-flow: column;
@@ -142,8 +138,8 @@ footer {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 0 80px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 #stats-div > p {
@@ -171,4 +167,8 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
+}
+
+.hide {
+    visibility: hidden;
 }

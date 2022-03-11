@@ -17,12 +17,14 @@ const sloganInput = document.getElementById('slogan-input');
 const sloganButton = document.getElementById('slogan-button');
 
 const sloganAreaEl = document.getElementById('slogan-list-div');
+const sloganHeader = document.getElementById('slogan-header');
 
 // let state
-// topCount = 0;
-// middleCount = 0;
-// bottomCount = 0;
+let topCount = 0;
+let middleCount = 0;
+let bottomCount = 0;
 const slogans = [];
+statsEl.onload = displayCountStats();
 topPleaseSelect.disabled = true;
 middlePleaseSelect.disabled = true;
 bottomPleaseSelect.disabled = true;
@@ -32,23 +34,31 @@ bottomPleaseSelect.disabled = true;
   // use user input to update state 
   // update DOM to reflect the new state
 topDropdown.addEventListener('change', () => {
-    console.log('this is working');
+    topCount++;
+    topImage.src = `./assets/sky-${topDropdown.value}.jpg`;
+    topImage.classList.remove('hide');
+    displayCountStats();
 });
 
 middleDropdown.addEventListener('change', () => {
-    console.log('this is working');
+    middleCount++;
+    middleImage.src = `./assets/terrain-${middleDropdown.value}.jpg`;
+    middleImage.classList.remove('hide');
+    displayCountStats();
 });
 
 bottomDropdown.addEventListener('change', () => {
-    console.log('this is working');
+    bottomCount++;
+    bottomImage.src = `./assets/buildings-${bottomDropdown.value}.jpg`;
+    bottomImage.classList.remove('hide');
+    displayCountStats();
 });
 
 sloganButton.addEventListener('click', () => {
-    console.log('this is working');
+    displaySlogans();
 });
 
 // functions
-
 function displayCountStats() {
     statsEl.textContent = `You've changed the sky ${topCount} times. 
     You've changed the terrain ${middleCount} times. 
@@ -58,9 +68,16 @@ function displayCountStats() {
 function displaySlogans() {
     sloganAreaEl.textContent = '';
     const newSlogan = sloganInput.value;
+    sloganHeader.classList.remove('hide');
     slogans.push(newSlogan);
+    sloganHeader.textContent = 'Slogan:';
+    if (slogans.length > 1) {
+        sloganHeader.textContent = 'Slogans:';
+    }
+    sloganAreaEl.append(sloganHeader);
     for (let slogan of slogans) {
         const addSlogan = document.createElement('p');
+        addSlogan.textContent = slogan;
         sloganAreaEl.append(addSlogan);
     }
     sloganInput.value = '';
