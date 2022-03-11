@@ -20,7 +20,7 @@ const sloganButton = document.getElementById('slogan-button');
 
 const sloganAreaEl = document.getElementById('slogan-list-div');
 
-console.log(topImage, topDropdown, topCountEl, middleImage, middleDropdown, middleCountEl, bottomImage, bottomDropdown, bottomCountEl, sloganInput, sloganButton, sloganAreaEl);
+// console.log(topImage, topDropdown, topCountEl, middleImage, middleDropdown, middleCountEl, bottomImage, bottomDropdown, bottomCountEl, sloganInput, sloganButton, sloganAreaEl);
 
 // let state
 top = 0;
@@ -35,3 +35,5 @@ bottomPleaseSelect.disabled = true;
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
+
+// functions
